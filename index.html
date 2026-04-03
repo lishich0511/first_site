@@ -1,138 +1,277 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SCLIDK | 官方网站</title>
-  <meta name="description" content="SCLIDK 官方网站 - 用技术构建更高效的数字体验。" />
-  <style>
-    :root{
-      --bg:#070b14;
-      --bg2:#0e1630;
-      --card:rgba(255,255,255,.06);
-      --text:#eaf2ff;
-      --muted:#a6b4d0;
-      --brand:#63a4ff;
-      --brand2:#7c4dff;
-      --line:rgba(255,255,255,.12);
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:var(--text);background:radial-gradient(1200px 500px at 80% -10%, #2d4b96 0%, transparent 60%),linear-gradient(160deg,var(--bg),var(--bg2));}
-    a{text-decoration:none;color:inherit}
-    .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-    .nav{position:sticky;top:0;backdrop-filter:blur(8px);background:rgba(7,11,20,.55);border-bottom:1px solid var(--line);z-index:20}
-    .nav-inner{height:68px;display:flex;align-items:center;justify-content:space-between}
-    .logo{font-weight:800;letter-spacing:.5px}
-    .logo span{background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
-    .menu{display:flex;gap:24px;color:var(--muted);font-size:14px}
-    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:linear-gradient(90deg,var(--brand),var(--brand2));color:#fff;font-weight:600;transition:.2s}
-    .btn:hover{transform:translateY(-1px)}
-    .hero{padding:92px 0 70px}
-    .tag{display:inline-block;padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:#cdd8f3;background:rgba(255,255,255,.04)}
-    h1{font-size:50px;line-height:1.15;margin:18px 0 14px}
-    .sub{font-size:17px;color:var(--muted);max-width:760px;line-height:1.8}
-    .hero-actions{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
-    .btn-ghost{padding:10px 16px;border:1px solid var(--line);border-radius:10px;color:#d6e2ff;background:rgba(255,255,255,.03)}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:34px 0 10px}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
-    .card h3{margin:0 0 10px;font-size:18px}
-    .card p{margin:0;color:var(--muted);line-height:1.7;font-size:14px}
-    .section{padding:26px 0 18px}
-    .section h2{font-size:28px;margin:0 0 14px}
-    .about{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
-    .stat{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .mini{padding:18px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.03)}
-    .mini strong{font-size:24px}
-    .contact{margin:26px 0 46px;padding:24px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.04);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-    footer{border-top:1px solid var(--line);padding:18px 0 30px;color:#90a1c2;font-size:13px}
-    @media (max-width:900px){
-      h1{font-size:38px}
-      .grid{grid-template-columns:1fr}
-      .about{grid-template-columns:1fr}
-    }
-    @media (max-width:560px){
-      .menu{display:none}
-      h1{font-size:32px}
-      .sub{font-size:15px}
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SCLIDK | 让想法更快落地</title>
+<meta name="description" content="SCLIDK 官方网站 - 数字化建设与网站落地服务" />
+<style>
+:root{
+--bg:#070b14;
+--bg2:#0e1630;
+--text:#eaf2ff;
+--muted:#a8b5d2;
+--line:rgba(255,255,255,.14);
+--card:rgba(255,255,255,.06);
+--brand:#67a8ff;
+--brand2:#8b5cf6;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+color:var(--text);
+background: radial-gradient(1000px 500px at 80% -10%, #284887 0%, transparent 60%), linear-gradient(160deg,var(--bg),var(--bg2));
+overflow-x:hidden;
+}
+#particle{
+position:fixed; inset:0; z-index:-1;
+width:100%; height:100%;
+}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.nav{
+position:sticky; top:0; z-index:50;
+backdrop-filter: blur(10px);
+background: rgba(7,11,20,.55);
+border-bottom:1px solid var(--line);
+}
+.nav-inner{
+height:68px; display:flex; align-items:center; justify-content:space-between;
+}
+.logo{font-weight:800; letter-spacing:.6px}
+.logo span{
+background:linear-gradient(90deg,var(--brand),var(--brand2));
+-webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.menu{display:flex; gap:24px; color:var(--muted); font-size:14px}
+.menu a{color:inherit; text-decoration:none}
+.btn{
+display:inline-block;
+padding:10px 16px; border-radius:10px;
+color:#fff; text-decoration:none; font-weight:600;
+background:linear-gradient(90deg,var(--brand),var(--brand2));
+border:none; cursor:pointer;
+transition:.2s;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn-ghost{
+display:inline-block; padding:10px 16px; border-radius:10px;
+color:#dbe7ff; text-decoration:none;
+border:1px solid var(--line); background:rgba(255,255,255,.03);
+}
+
+.hero{padding:92px 0 60px}
+.badge{
+display:inline-block; font-size:12px; color:#d2ddf7;
+padding:7px 12px; border-radius:999px;
+border:1px solid var(--line); background:rgba(255,255,255,.04);
+}
+.title{
+margin:16px 0 12px; font-size:52px; line-height:1.15; min-height:120px;
+}
+.cursor{
+display:inline-block; width:2px; height:1em; background:#b8ccff; margin-left:6px;
+animation:blink .9s infinite;
+vertical-align:-0.15em;
+}
+@keyframes blink{50%{opacity:0}}
+.sub{
+max-width:760px; color:var(--muted); line-height:1.8; font-size:17px;
+}
+.actions{margin-top:24px; display:flex; gap:12px; flex-wrap:wrap}
+
+.grid{
+display:grid; grid-template-columns:repeat(3,1fr); gap:16px;
+margin:34px 0 10px;
+}
+.card{
+background:var(--card); border:1px solid var(--line);
+border-radius:16px; padding:22px;
+box-shadow:0 10px 30px rgba(0,0,0,.18);
+}
+.card h3{margin:0 0 10px}
+.card p{margin:0; color:var(--muted); line-height:1.75; font-size:14px}
+
+.section{padding:28px 0 16px}
+.section h2{margin:0 0 14px; font-size:28px}
+.about{display:grid; grid-template-columns:1.2fr .8fr; gap:16px}
+.stats{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+.mini{
+background:rgba(255,255,255,.04);
+border:1px solid var(--line); border-radius:14px; padding:18px;
+color:#d5e3ff;
+}
+.mini strong{font-size:23px}
+
+.contact{
+margin:26px 0 48px; padding:22px;
+border:1px solid var(--line); border-radius:16px;
+background:rgba(255,255,255,.04);
+display:flex; justify-content:space-between; gap:16px; align-items:center; flex-wrap:wrap;
+}
+.contact p{margin:0; color:var(--muted)}
+footer{
+border-top:1px solid var(--line);
+color:#8fa0c1; font-size:13px;
+padding:18px 0 30px;
+}
+
+@media (max-width:900px){
+.title{font-size:40px; min-height:96px}
+.grid{grid-template-columns:1fr}
+.about{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+.menu{display:none}
+.title{font-size:32px; min-height:84px}
+.sub{font-size:15px}
+}
+</style>
 </head>
 <body>
-  <header class="nav">
-    <div class="wrap nav-inner">
-      <div class="logo">SCLIDK<span>.SITE</span></div>
-      <nav class="menu">
-        <a href="#services">服务</a>
-        <a href="#about">关于</a>
-        <a href="#contact">联系</a>
-      </nav>
-      <a class="btn" href="#contact">立即咨询</a>
-    </div>
-  </header>
+<canvas id="particle"></canvas>
 
-  <main class="wrap">
-    <section class="hero">
-      <span class="tag">🚀 Official Website Online</span>
-      <h1>把想法快速落地成<br/>真正可用的数字产品</h1>
-      <p class="sub">
-        我们专注于网站搭建、业务数字化与体验升级，
-        用稳定、可迭代的方式，把“能看”做成“能用”，把“能用”做成“好用”。
-      </p>
-      <div class="hero-actions">
-        <a class="btn" href="#services">查看服务</a>
-        <a class="btn-ghost" href="#about">了解我们</a>
-      </div>
-    </section>
+<header class="nav">
+<div class="wrap nav-inner">
+<div class="logo">SCLIDK<span>.SITE</span></div>
+<nav class="menu">
+<a href="#services">服务</a>
+<a href="#about">关于</a>
+<a href="#contact">联系</a>
+</nav>
+<a class="btn" href="#contact">立即咨询</a>
+</div>
+</header>
 
-    <section id="services" class="section">
-      <h2>核心服务</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>官网与落地页</h3>
-          <p>企业官网、产品介绍页、活动页快速上线，支持 SEO 基础优化与移动端适配。</p>
-        </article>
-        <article class="card">
-          <h3>业务流程数字化</h3>
-          <p>围绕真实业务场景做流程梳理与系统化改造，先稳定可用，再逐步扩展。</p>
-        </article>
-        <article class="card">
-          <h3>持续迭代维护</h3>
-          <p>按阶段优化页面与功能，沉淀可复用资产，降低后续沟通和重复建设成本。</p>
-        </article>
-      </div>
-    </section>
+<main class="wrap">
+<section class="hero">
+<span class="badge">⚡ Premium Landing Page</span>
+<h1 class="title"><span id="typing"></span><span class="cursor"></span></h1>
+<p class="sub">
+我们专注于网站建设与数字化落地，用稳定、可追踪、可迭代的方法，
+把创意变成真正可上线、可展示、可转化的产品页面。
+</p>
+<div class="actions">
+<a class="btn" href="#services">查看服务</a>
+<a class="btn-ghost" href="#about">了解我们</a>
+</div>
+</section>
 
-    <section id="about" class="section about">
-      <article class="card">
-        <h2 style="margin-top:0">关于 SCLIDK</h2>
-        <p class="sub" style="margin:0">
-          我们相信：好的技术方案，不是一次性“炫技”，而是可追踪、可审计、可复用的长期能力建设。
-          从轻量网页到完整系统，始终坚持“先小范围稳定可用，再逐步智能化升级”。
-        </p>
-      </article>
-      <aside class="stat">
-        <div class="mini"><strong>1 周内</strong><br/>首版可上线</div>
-        <div class="mini"><strong>持续交付</strong><br/>按阶段迭代优化</div>
-        <div class="mini"><strong>可追溯</strong><br/>关键改动有记录</div>
-        <div class="mini"><strong>可扩展</strong><br/>支持后续功能增长</div>
-      </aside>
-    </section>
+<section id="services" class="section">
+<h2>核心服务</h2>
+<div class="grid">
+<article class="card">
+<h3>官网与落地页</h3>
+<p>企业官网、产品介绍页、活动页一站式搭建，支持移动端和基础 SEO。</p>
+</article>
+<article class="card">
+<h3>业务流程数字化</h3>
+<p>围绕真实业务场景做系统化改造，坚持“先小范围稳定可用，再逐步升级”。</p>
+</article>
+<article class="card">
+<h3>长期迭代维护</h3>
+<p>持续优化视觉与交互，沉淀可复用模板，减少重复建设与沟通成本。</p>
+</article>
+</div>
+</section>
 
-    <section id="contact" class="contact">
-      <div>
-        <h3 style="margin:0 0 8px">准备开始你的项目？</h3>
-        <div style="color:var(--muted)">把需求发我，我们先做一版“能上线、能展示、能转化”的首页。</div>
-      </div>
-      <a class="btn" href="mailto:hello@sclidk.site">hello@sclidk.site</a>
-    </section>
-  </main>
+<section id="about" class="section about">
+<article class="card">
+<h2 style="margin-top:0">关于 SCLIDK</h2>
+<p class="sub" style="margin:0">
+我们相信，技术价值不在“炫”，而在“稳、准、可持续”。
+从首页到系统，从上线到运营，用工程化思维做真正长期有效的数字资产。
+</p>
+</article>
+<aside class="stats">
+<div class="mini"><strong>7 天</strong><br/>首版可上线</div>
+<div class="mini"><strong>持续交付</strong><br/>按阶段优化</div>
+<div class="mini"><strong>可追溯</strong><br/>关键改动有记录</div>
+<div class="mini"><strong>可扩展</strong><br/>支持后续增长</div>
+</aside>
+</section>
 
-  <footer>
-    <div class="wrap">© <span id="year"></span> SCLIDK. All rights reserved.</div>
-  </footer>
+<section id="contact" class="contact">
+<div>
+<h3 style="margin:0 0 8px">准备开始你的项目？</h3>
+<p>发我需求，我们先给你一版“能上线、能展示、能转化”的高质首页。</p>
+</div>
+<a class="btn" href="mailto:hello@sclidk.site">hello@sclidk.site</a>
+</section>
+</main>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<footer>
+<div class="wrap">© <span id="year"></span> SCLIDK. All rights reserved.</div>
+</footer>
+
+<script>
+// 年份
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// 打字机效果
+const text = "把想法，快速做成可用的数字产品";
+const typingEl = document.getElementById("typing");
+let i = 0;
+(function type(){
+if(i <= text.length){
+typingEl.textContent = text.slice(0, i++);
+setTimeout(type, 80);
+}
+})();
+
+// 粒子背景
+const canvas = document.getElementById("particle");
+const ctx = canvas.getContext("2d");
+let w,h,particles;
+
+function resize(){
+w = canvas.width = window.innerWidth;
+h = canvas.height = window.innerHeight;
+const count = Math.min(120, Math.floor(w / 12));
+particles = Array.from({length:count}, () => ({
+x: Math.random()*w,
+y: Math.random()*h,
+vx: (Math.random()-.5)*0.4,
+vy: (Math.random()-.5)*0.4,
+r: Math.random()*1.8 + 0.6
+}));
+}
+
+function draw(){
+ctx.clearRect(0,0,w,h);
+
+for(const p of particles){
+p.x += p.vx; p.y += p.vy;
+if(p.x<0||p.x>w) p.vx *= -1;
+if(p.y<0||p.y>h) p.vy *= -1;
+
+ctx.beginPath();
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+ctx.fillStyle = "rgba(160,190,255,0.8)";
+ctx.fill();
+}
+
+for(let i=0;i<particles.length;i++){
+for(let j=i+1;j<particles.length;j++){
+const a=particles[i], b=particles[j];
+const dx=a.x-b.x, dy=a.y-b.y;
+const d=Math.sqrt(dx*dx+dy*dy);
+if(d<110){
+ctx.strokeStyle = `rgba(130,165,255,${(1-d/110)*0.25})`;
+ctx.lineWidth=1;
+ctx.beginPath();
+ctx.moveTo(a.x,a.y);
+ctx.lineTo(b.x,b.y);
+ctx.stroke();
+}
+}
+}
+
+requestAnimationFrame(draw);
+}
+
+window.addEventListener("resize", resize);
+resize(); draw();
+</script>
 </body>
 </html>
