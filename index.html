@@ -1,12 +1,138 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>sclidk.site</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCLIDK | 官方网站</title>
+  <meta name="description" content="SCLIDK 官方网站 - 用技术构建更高效的数字体验。" />
+  <style>
+    :root{
+      --bg:#070b14;
+      --bg2:#0e1630;
+      --card:rgba(255,255,255,.06);
+      --text:#eaf2ff;
+      --muted:#a6b4d0;
+      --brand:#63a4ff;
+      --brand2:#7c4dff;
+      --line:rgba(255,255,255,.12);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:var(--text);background:radial-gradient(1200px 500px at 80% -10%, #2d4b96 0%, transparent 60%),linear-gradient(160deg,var(--bg),var(--bg2));}
+    a{text-decoration:none;color:inherit}
+    .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+    .nav{position:sticky;top:0;backdrop-filter:blur(8px);background:rgba(7,11,20,.55);border-bottom:1px solid var(--line);z-index:20}
+    .nav-inner{height:68px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-weight:800;letter-spacing:.5px}
+    .logo span{background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .menu{display:flex;gap:24px;color:var(--muted);font-size:14px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:linear-gradient(90deg,var(--brand),var(--brand2));color:#fff;font-weight:600;transition:.2s}
+    .btn:hover{transform:translateY(-1px)}
+    .hero{padding:92px 0 70px}
+    .tag{display:inline-block;padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:#cdd8f3;background:rgba(255,255,255,.04)}
+    h1{font-size:50px;line-height:1.15;margin:18px 0 14px}
+    .sub{font-size:17px;color:var(--muted);max-width:760px;line-height:1.8}
+    .hero-actions{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+    .btn-ghost{padding:10px 16px;border:1px solid var(--line);border-radius:10px;color:#d6e2ff;background:rgba(255,255,255,.03)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:34px 0 10px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+    .card h3{margin:0 0 10px;font-size:18px}
+    .card p{margin:0;color:var(--muted);line-height:1.7;font-size:14px}
+    .section{padding:26px 0 18px}
+    .section h2{font-size:28px;margin:0 0 14px}
+    .about{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    .stat{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .mini{padding:18px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.03)}
+    .mini strong{font-size:24px}
+    .contact{margin:26px 0 46px;padding:24px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.04);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+    footer{border-top:1px solid var(--line);padding:18px 0 30px;color:#90a1c2;font-size:13px}
+    @media (max-width:900px){
+      h1{font-size:38px}
+      .grid{grid-template-columns:1fr}
+      .about{grid-template-columns:1fr}
+    }
+    @media (max-width:560px){
+      .menu{display:none}
+      h1{font-size:32px}
+      .sub{font-size:15px}
+    }
+  </style>
 </head>
-<body style="font-family: Arial; text-align:center; padding:60px;">
-<h1>网站已上线测试中 🚀</h1>
-<p>测试</p>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <div class="logo">SCLIDK<span>.SITE</span></div>
+      <nav class="menu">
+        <a href="#services">服务</a>
+        <a href="#about">关于</a>
+        <a href="#contact">联系</a>
+      </nav>
+      <a class="btn" href="#contact">立即咨询</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <span class="tag">🚀 Official Website Online</span>
+      <h1>把想法快速落地成<br/>真正可用的数字产品</h1>
+      <p class="sub">
+        我们专注于网站搭建、业务数字化与体验升级，
+        用稳定、可迭代的方式，把“能看”做成“能用”，把“能用”做成“好用”。
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="#services">查看服务</a>
+        <a class="btn-ghost" href="#about">了解我们</a>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <h2>核心服务</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>官网与落地页</h3>
+          <p>企业官网、产品介绍页、活动页快速上线，支持 SEO 基础优化与移动端适配。</p>
+        </article>
+        <article class="card">
+          <h3>业务流程数字化</h3>
+          <p>围绕真实业务场景做流程梳理与系统化改造，先稳定可用，再逐步扩展。</p>
+        </article>
+        <article class="card">
+          <h3>持续迭代维护</h3>
+          <p>按阶段优化页面与功能，沉淀可复用资产，降低后续沟通和重复建设成本。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <article class="card">
+        <h2 style="margin-top:0">关于 SCLIDK</h2>
+        <p class="sub" style="margin:0">
+          我们相信：好的技术方案，不是一次性“炫技”，而是可追踪、可审计、可复用的长期能力建设。
+          从轻量网页到完整系统，始终坚持“先小范围稳定可用，再逐步智能化升级”。
+        </p>
+      </article>
+      <aside class="stat">
+        <div class="mini"><strong>1 周内</strong><br/>首版可上线</div>
+        <div class="mini"><strong>持续交付</strong><br/>按阶段迭代优化</div>
+        <div class="mini"><strong>可追溯</strong><br/>关键改动有记录</div>
+        <div class="mini"><strong>可扩展</strong><br/>支持后续功能增长</div>
+      </aside>
+    </section>
+
+    <section id="contact" class="contact">
+      <div>
+        <h3 style="margin:0 0 8px">准备开始你的项目？</h3>
+        <div style="color:var(--muted)">把需求发我，我们先做一版“能上线、能展示、能转化”的首页。</div>
+      </div>
+      <a class="btn" href="mailto:hello@sclidk.site">hello@sclidk.site</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> SCLIDK. All rights reserved.</div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
